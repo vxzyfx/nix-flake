@@ -1,8 +1,6 @@
-{hostname, config, lib, pkgs, ...}:
+{hostname, vars, config, lib, pkgs, ...}:
 {
   networking.hostName = "shugbook";
-  networking.wireless.iwd.enable = true;
-  time.timeZone = "Asia/Shanghai";
 
   i18n.defaultLocale = "en_US.UTF-8";
   console = {
@@ -17,7 +15,7 @@
   services.libinput.enable = true;
   services.seatd.enable = true;
 
-  users.users.shug = {
+  users.users.${vars.username} = {
     isNormalUser = true;
     extraGroups = [ "wheel" "audio" "video" "lp" "kvm" "uucp" "input" "seat" "dialout"];
   };

@@ -11,7 +11,7 @@
     in
     inputs
     // {
-      inherit mylib myvars vars;
+      inherit mylib myvars vars hostname;
       pkgs-unstable = import inputs.nixpkgs-unstable {
         inherit system;
         config.allowUnfree = true;

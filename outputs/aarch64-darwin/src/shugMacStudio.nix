@@ -9,6 +9,7 @@
 } @ args: let
   name = "shugMacStudio";
   modules = {
+    hostname = name;
     darwin-modules =
       (map mylib.relativeToRoot [
         "modules/darwin"

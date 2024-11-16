@@ -8,11 +8,6 @@
     tree
     btop
   ];
-  programs.git = {
-    enable = true;
-    userName = "shug";
-    userEmail = "shug@shug.site";
-  };
   wayland.windowManager.hyprland = {
     enable = true;
     extraConfig = ''

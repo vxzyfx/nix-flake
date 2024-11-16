@@ -1,4 +1,6 @@
-{lib}: {
-  shugbook = import ./shugbook.nix;
-  shugMacStudio = import ./shugMacStudio.nix;
+{lib}: let
+  sshAuthorizedKeys = import ./sshAuthorizedKeys.nix;
+in {
+  shugbook = (import ./shugbook.nix) // sshAuthorizedKeys;
+  shugMacStudio = (import ./shugMacStudio.nix) // sshAuthorizedKeys;
 }
