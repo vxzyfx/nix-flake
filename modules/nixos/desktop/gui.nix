@@ -14,6 +14,14 @@
 
   services.libinput.enable = true;
   services.seatd.enable = true;
+  programs.uwsm = {
+    enable = true;
+    waylandCompositors.hyprland = {
+      binPath = "/etc/profiles/per-user/${vars.username}/bin/Hyprland";
+      comment = "Hyprland session managed by uwsm";
+      prettyName = "Hyprland";
+    };
+  };
 
   users.users.${vars.username} = {
     isNormalUser = true;

@@ -10,6 +10,7 @@
   ];
   wayland.windowManager.hyprland = {
     enable = true;
+    systemd.enable = false;
     extraConfig = ''
       $mainMod = SUPER
       bind = $mainMod, R, exec, fuzzel
@@ -27,5 +28,10 @@
   programs.bash = {
     enable = true;
     enableCompletion = true;
+    profileExtra = ''
+      if uwsm check may-start; then
+        exec uwsm start hyprland-uwsm.desktop
+      fi
+    '';
   };
 }
