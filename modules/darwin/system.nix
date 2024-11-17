@@ -1,7 +1,5 @@
 {pkgs, ...}:
 {
-  system.keyboard.enableKeyMapping = true;
-  system.keyboard.swapLeftCommandAndLeftAlt = true;
   system.defaults = {
     dock.autohide = true;
     finder = {
