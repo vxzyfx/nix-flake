@@ -1,10 +1,17 @@
-{vars, ...}:
-let
-  hostName = "shugbook";
-in {
+{vars, pkgs, ...}:
+{
   imports = [
     ./hardware-configuration.nix
+    ./logid.nix
   ];
+  services.udev = {
+    enable = true;
+    extraRules = ''
+     RUN+="${pkgs.coreutils-full}/bin/chgrp wheel /sys/class/backlight/intel_backlight/brightness"
+     RUN+="${pkgs.coreutils-full}/bin/chmod g+w /sys/class/backlight/intel_backlight/brightness" 
+    '';
+  };
+  nixpkgs.config.allowUnfree = true;
   networking.useDHCP = false;
   networking.wireless.iwd.enable = true;
   boot.loader.systemd-boot.enable = true;
@@ -21,6 +28,5 @@ in {
     gateway =  [ "192.168.21.1" ];
     address = [ "192.168.21.91/24" ];
   };
-
   system.stateVersion = "24.05";
 }

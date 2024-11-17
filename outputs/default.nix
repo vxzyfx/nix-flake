@@ -12,14 +12,6 @@
     inputs
     // {
       inherit mylib myvars vars hostname;
-      pkgs-unstable = import inputs.nixpkgs-unstable {
-        inherit system;
-        config.allowUnfree = true;
-      };
-      pkgs-stable = import inputs.nixpkgs-stable {
-        inherit system;
-        config.allowUnfree = true;
-      };
   };
   args = { inherit inputs lib mylib myvars genSpecialArgs; };
   nixosSystems = {

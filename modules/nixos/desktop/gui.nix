@@ -27,6 +27,19 @@
     isNormalUser = true;
     extraGroups = [ "wheel" "audio" "video" "lp" "kvm" "uucp" "input" "seat" "dialout"];
   };
+  fonts.packages  = with pkgs; [
+      material-design-icons
+      font-awesome
+
+      (nerdfonts.override {
+        fonts = [
+          "NerdFontsSymbolsOnly"
+          "FiraCode"
+          "JetBrainsMono"
+          "Iosevka"
+        ];
+      })
+    ];
 
   environment.systemPackages = with pkgs; [
     vim
