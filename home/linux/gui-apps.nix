@@ -11,6 +11,9 @@
       commandLineArgs = "--ozone-platform=wayland --enable-wayland-ime";
     })
   ];
+  programs.firefox = {
+    enable = true;
+  };
   programs.vscode = {
     enable = true;
     package = (pkgs.vscode.override {
