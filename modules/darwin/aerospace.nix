@@ -1,13 +1,15 @@
-{...}:
+{pkgs, ...}:
 {
   services.aerospace = {
     enable = true;
     settings = {
       gaps = {
-        outer.left = 8;
-        outer.bottom = 8;
-        outer.top = 8;
-        outer.right = 8;
+        inner.horizontal = 3;
+        inner.vertical =   3;
+        outer.left = 6;
+        outer.bottom = 6;
+        outer.top = 6;
+        outer.right = 6;
       };
       mode.main.binding = {
         alt-slash = "layout tiles horizontal vertical";
@@ -55,7 +57,7 @@
         alt-shift-tab = "move-workspace-to-monitor --wrap-around next";
         alt-shift-semicolon = "mode service";
         alt-r = "mode resize";
-        alt-enter = "exec-and-forget alacritty";
+        alt-enter = "exec-and-forget ${pkgs.alacritty}/bin/alacritty";
       };
       mode.service.binding = {
         r = ["flatten-workspace-tree" "mode main"];
@@ -69,6 +71,7 @@
       mode.resize.binding = {
         minus = "resize smart -50";
         equal = "resize smart +50";
+        esc = "mode main";
       };
       on-focus-changed = [
         "move-mouse window-lazy-center"
