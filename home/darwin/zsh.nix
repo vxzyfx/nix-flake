@@ -1,8 +1,5 @@
 {pkgs, ...}:
 {
-  home.packages = with pkgs;[
-    jetbrains.goland
-  ];
   programs.zsh = {
     enable = true;
     shellAliases = {
