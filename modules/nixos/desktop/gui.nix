@@ -26,7 +26,7 @@
 
   users.users.${vars.username} = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "audio" "video" "lp" "kvm" "uucp" "input" "seat" "dialout"];
+    extraGroups = [ "wheel" "audio" "video" "lp" "kvm" "uucp" "input" "seat" "dialout" ];
   };
   fonts.packages  = with pkgs; [
       material-design-icons

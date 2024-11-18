@@ -28,5 +28,26 @@
     gateway =  [ "192.168.21.1" ];
     address = [ "192.168.21.91/24" ];
   };
+  users.users.${vars.username} = {
+    extraGroups = [ "qemu-libvirtd" "libvirtd"];
+  };
   system.stateVersion = "24.05";
+  virtualisation.libvirtd = {
+    enable = true;
+    qemu = {
+      package = pkgs.qemu_kvm;
+      runAsRoot = true;
+      swtpm.enable = true;
+      ovmf = {
+        enable = true;
+          packages = [(pkgs.OVMF.override {
+          secureBoot = true;
+          tpmSupport = true;
+        }).fd];
+      };
+    };
+  };
+    environment.systemPackages = with pkgs; [
+    virt-manager
+  ];
 }
