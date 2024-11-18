@@ -57,7 +57,7 @@
         alt-shift-tab = "move-workspace-to-monitor --wrap-around next";
         alt-shift-semicolon = "mode service";
         alt-r = "mode resize";
-        alt-enter = "exec-and-forget ${pkgs.alacritty}/bin/alacritty";
+        alt-enter = "exec-and-forget ${pkgs.kitty}/bin/kitty";
       };
       mode.service.binding = {
         r = ["flatten-workspace-tree" "mode main"];

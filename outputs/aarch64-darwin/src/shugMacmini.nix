@@ -19,6 +19,7 @@
     home-modules = map mylib.relativeToRoot [
       "hosts/darwin-${name}/home.nix"
       "home/darwin"
+      "home/base/dev"
     ];
   };
   systemArgs = modules // args;

@@ -17,6 +17,7 @@
     home-modules = map mylib.relativeToRoot [
       "home/linux/gui.nix"
       "hosts/linux-${name}/home.nix"
+      "home/base/dev"
     ];
   };
 in {

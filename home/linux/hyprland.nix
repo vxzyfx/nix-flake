@@ -106,7 +106,7 @@
           ", XF86AudioRaiseVolume, exec, uwsm app -- wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
           ", XF86AudioLowerVolume, exec, uwsm app -- wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-"
           "$mod, R, exec, uwsm app -- fuzzel"
-          "$mod, return, exec, uwsm app -- alacritty"
+          "$mod, return, exec, uwsm app -- kitty"
         ]
         ++ (
           builtins.concatLists (builtins.genList (i:
