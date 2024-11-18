@@ -6,5 +6,6 @@
     ./waybar.nix
     ./gui-apps.nix
     ./gui-dev.nix
+    ./jetbrains.nix
   ];
 }
