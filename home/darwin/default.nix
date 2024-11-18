@@ -1,6 +1,7 @@
 {
   mylib,
   vars,
+  mac-app-util,
   ...
 }: {
   home = {
@@ -17,6 +18,7 @@
   imports =
     (mylib.scanPaths ./.)
     ++ [
+      mac-app-util.homeManagerModules.default
       ../base/core
     ];
 }
