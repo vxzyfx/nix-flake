@@ -96,6 +96,7 @@
           "$mod, bracketright, workspace, r+1"
           "$mod, bracketleft, workspace, r-1"
           "$mod SHIFT, F, fullscreen"
+          "$mod, F, togglefloating"
           "$mod, mouse:272, movewindow"
           "$mod, P, pseudo," 
           "$mod, slash, togglesplit,"
