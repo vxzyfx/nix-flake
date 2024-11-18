@@ -2,6 +2,9 @@
 {
   programs.zsh = {
     enable = true;
+    shellAliases = {
+      "ls" = "ls --color";
+    };
     initExtra = ''
       bindkey  "^[[H"   beginning-of-line
       bindkey  "^[[F"   end-of-line

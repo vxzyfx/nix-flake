@@ -57,6 +57,10 @@
       window = {
         decorations = "Buttonless";
         option_as_alt = "Both";
+        padding = {
+          x = 6;
+          y = 6;
+        };
       };
     };
   };
