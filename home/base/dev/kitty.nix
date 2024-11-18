@@ -8,6 +8,7 @@
     themeFile = "tokyo_night_moon";
     settings = {
       hide_window_decorations = "yes";
+      macos_quit_when_last_window_closed = "yes";
       window_padding_width = 6;
     };
   };
