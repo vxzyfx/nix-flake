@@ -1,6 +1,6 @@
 {hostname, vars, config, lib, pkgs, ...}:
 {
-  networking.hostName = "shugbook";
+  networking.hostName = hostname;
 
   i18n.defaultLocale = "en_US.UTF-8";
   console = {
@@ -22,6 +22,7 @@
       prettyName = "Hyprland";
     };
   };
+  security.polkit.enable = true;
 
   users.users.${vars.username} = {
     isNormalUser = true;
@@ -30,6 +31,7 @@
   fonts.packages  = with pkgs; [
       material-design-icons
       font-awesome
+      vistafonts-chs
 
       (nerdfonts.override {
         fonts = [
@@ -46,6 +48,7 @@
     wget
     curl
     git
+    polkit_gnome
   ];
 
   services.openssh.enable = true;

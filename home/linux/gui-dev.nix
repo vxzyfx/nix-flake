@@ -7,8 +7,6 @@
       nix-direnv.enable = true;
     };
   };
-  i18n.inputMethod.enabled = "fcitx5";
-  i18n.inputMethod.fcitx5.addons = with pkgs; [ fcitx5-rime ];
   programs.alacritty = {
     enable = true;
     settings = {

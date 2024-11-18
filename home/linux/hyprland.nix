@@ -1,14 +1,35 @@
 {pkgs, ...}:
 {
+  home.pointerCursor = {
+    gtk.enable = true;
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Classic";
+    size = 16;
+  };
   home.packages = with pkgs;[
     acpilight
   ];
+  services.mako = {
+    enable = true;
+    font = "monospace 10";
+    width = 350;
+    padding = "10";
+    margin = "10";
+    borderSize = 2;
+    borderRadius = 8;
+    backgroundColor = "#1d202f";
+    borderColor = "#f7768e";
+    textColor = "#c0caf5";
+    defaultTimeout = 3000;
+  };
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = false;
     settings = {
       exec-once = [
         "uwsm app -- waybar"
+        "uwsm app -- mako"
+        "uwsm app -- ${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
       ];
       general = {
         gaps_in = 3;
