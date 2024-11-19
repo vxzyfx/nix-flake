@@ -127,7 +127,7 @@
           ", XF86AudioMute, exec, uwsm app -- wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
           ", XF86AudioRaiseVolume, exec, uwsm app -- wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
           ", XF86AudioLowerVolume, exec, uwsm app -- wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-"
-          "$mod SHIFT, k, killactive,"
+          "$mod SHIFT, z, killactive,"
           "$mod, R, exec, uwsm app -- fuzzel"
           "ALT, SPACE, exec, uwsm app -- fuzzel"
           "$mod, return, exec, uwsm app -- kitty"
