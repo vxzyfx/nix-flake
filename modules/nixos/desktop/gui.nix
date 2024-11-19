@@ -48,6 +48,7 @@
     wget
     curl
     git
+    unzip
     polkit_gnome
   ];
 

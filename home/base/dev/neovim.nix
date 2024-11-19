@@ -199,9 +199,9 @@
         "lazyvim.plugins.extras.util.rest"
       ],
       "news": {
-        "NEWS.md": "6520"
+        "NEWS.md": "7429"
       },
-      "version": 6
+      "version": 7
     }
   '';
 }
