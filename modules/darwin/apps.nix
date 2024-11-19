@@ -16,6 +16,10 @@
     taps = [
       "homebrew/services"
     ];
+    brews = [
+      "openjdk@17"
+      "openjdk@21"
+    ];
     casks = [
       "wireshark"
       "google-chrome"
