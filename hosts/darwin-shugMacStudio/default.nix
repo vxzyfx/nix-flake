@@ -15,6 +15,7 @@
   ];
   homebrew = {
     casks = [
+      "arduino-ide"
       "mqttx"
     ];
   };
