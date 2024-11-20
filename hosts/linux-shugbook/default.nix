@@ -18,6 +18,10 @@
   boot.loader.systemd-boot.configurationLimit = 5;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.blacklistedKernelModules = [ "nouveau" ];
+  boot.tmp = {
+    useTmpfs = true;
+    tmpfsSize = "60%";
+  };
   systemd.network.enable = true;
   systemd.network.networks.wlan0 = {
     enable = true;
