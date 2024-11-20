@@ -23,6 +23,8 @@
     tmpfsSize = "60%";
   };
   systemd.network.enable = true;
+  services.resolved.enable = false;
+  networking.nameservers = [ "192.168.21.1" ];
   systemd.network.networks.wlan0 = {
     enable = true;
     matchConfig = {
@@ -51,7 +53,7 @@
       };
     };
   };
-    environment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     virt-manager
   ];
 }
