@@ -5,7 +5,8 @@
       doCheck = false;
     }))
     rustup
-    python313
+    python312
+    python312Packages.pip
     go
     dotnet-sdk_8
     php83
